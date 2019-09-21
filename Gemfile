@@ -7,6 +7,7 @@ ruby '2.6.3'
 gem 'rails', '~> 6.0.0'
 gem 'pg', '~> 0.18.4'
 gem 'bootstrap', '~> 4.3.1'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets

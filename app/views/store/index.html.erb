@@ -15,7 +15,7 @@
               <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/products">Products</a>
+              <a class="nav-link" href="/books">Books</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/news">News</a>
@@ -39,33 +39,21 @@
   <section class="products">
     <div class="container">
       <div class="row">
+        <% @books.each do |book| %>
         <div class="col-md-6">
           <article class="one-products">
-            <%= image_tag("book1.jpg", alt: "book_anme", class: "product-image")  %>
+            <%= image_tag(book.img_url, alt: book.title, title: book.title, class: "product-image")  %>
             <div class="details">
-              <h2>Book Title name</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <div class="actions">
-                <h5 class="product-price">$46.00</h5>
+              <h5 class="font-weight-bold" title="<%= book.title %>"><%= truncate(book.title, length: 30) %></h5>
+                <p><%= truncate(book.description, length: 100) %></p>
+                <div class="actions">
+                <h5 class="product-price">$<%= book.price %></h5>
                 <button type="button" name="button" class="addToCart">add to cart</button>
               </div>
             </div>
           </article>
         </div>
-
-        <div class="col-md-6">
-          <article class="one-products">
-            <%= image_tag("book1.jpg", alt: "book_anme", class: "product-image")  %>
-            <div class="details">
-              <h2>Book Title name</h2>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <div class="actions">
-                <h5 class="product-price">$46.00</h5>
-                <button type="button" name="button" class="addToCart">add to cart</button>
-              </div>
-            </div>
-          </article>
-        </div>
+        <% end %>
 
       </div>
     </div>
