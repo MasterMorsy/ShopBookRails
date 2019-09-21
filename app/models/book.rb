@@ -1,4 +1,14 @@
 class Book < ApplicationRecord
+  has_many :line_items
+  before_destroy :ensure_not_referenced_to_any_line_item
+
+
+  def ensure_not_referenced_to_any_line_item
+    unless line_items.empty?
+      errors.add("Sorry this book related with cart")
+      throw :abort
+    end
+  end
 
   validates :title, :description, :price, presence: true
   validates :title, uniqueness: true
