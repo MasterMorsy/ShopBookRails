@@ -1,0 +1,31 @@
+.products {
+  margin-top: 50px;
+  .one-products {
+    display: flex;
+    background: #fff;
+    box-shadow: 2px 8px 20px 0px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    height: 213px;
+    margin-bottom: 30px;
+    .product-image {
+      height: 100%;
+    }
+    .details {
+      padding: 21px;
+      .actions {
+        display: flex;
+        align-items: center;
+        .product-price {
+          margin-bottom: 0;
+        }
+        .addToCart {
+          background: #38ABEC;
+          border-radius: 3px;
+          border: none;
+          color: #fff;
+          margin-left: 40px;
+        }
+      }
+    }
+  }
+}
