@@ -1,3 +1,85 @@
 @import "bootstrap";
 @import "store";
 @import "carts";
+.centercenter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header {
+    .left-menu {
+        display: flex;
+        align-items: center;
+
+        .goToCart {
+            height: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 37%;
+            text-align: center;
+            margin: auto;
+        }
+        
+        .one-item {
+            display: flex;
+            user-select: none;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #ccc; 
+            .details {
+                .remove {
+                    background: red;
+                    width: 17px;
+                    font-size: 0.8rem;
+                    height: 17px;
+                    border-radius: 2px;
+                    color: #fff;
+                    text-align: center;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                margin-right: 20px;
+                p {
+                    margin-bottom: 0;
+                   
+                }
+            }
+            .item-img {
+                width: 50px;
+                height: 50px;
+            img {
+                height: 100%;
+            }
+            }
+        }
+    }
+    .main-search {
+        width: 68%;
+        input { width: 80%;}
+    }
+    .cart {
+        position: relative;
+        margin-right: 20px;
+        &:hover {
+            cursor: pointer;
+        }
+        .dropdown-menu {
+            max-height: 241px;
+            overflow-y: scroll;
+        }
+        .count {
+            position: absolute;
+            top: 0;
+            right: -7px;
+            background: red;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            color: #fff;
+            text-align: center;
+            font-size: 0.6rem;
+        }
+    }
+}
