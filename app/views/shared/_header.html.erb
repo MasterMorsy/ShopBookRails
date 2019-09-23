@@ -19,21 +19,26 @@
           <div class="cart dropdown">
             <div id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               <i class="fa fa-shopping-basket" aria-hidden="true"></i>
-              <div class="count"><%= @cart.line_items.count %></div>
+              <div class="count"><%= @cart ? @cart.line_items.count : 0 %></div>
             </div>
             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <% @cart.line_items.each do |item| %>
-                <div class="dropdown-item one-item">
-                  <div class="item-img">
-                    <%= image_tag(item.book.img_url, alt: item.book.title) %>
-                  </div>
-                  <div class="details">
-                    <p><%= item.book.title %> | <%= item.quantity %>x</p>
-                    <p class="centercenter">$<%= item.book.price %>   <span class='remove'>x</span></p>
-                  </div>
-                </div>
-              <% end %>
-               <a href="/carts/<%= @cart.id %>" class="btn btn-primary goToCart">cart</a>
+                <% if @cart %>
+                  <% @cart.line_items.each do |item| %>
+                    <div class="dropdown-item one-item">
+                      <div class="item-img">
+                        <%= image_tag(item.book.img_url, alt: item.book.title) %>
+                      </div>
+                      <div class="details">
+                        <p class="product-name"><%= item.book.title %></p>
+                        <p class="centercenter">$<%= item.book.price %> | <%= item.quantity %>x  <span class='remove'>x</span></p>
+                      </div>
+                    </div>
+                  <% end %>
+                  <a href="/carts/<%= @cart.id %>" class="btn btn-primary goToCart">cart</a>
+                <% else %>
+                  <p>Empty cart</p>
+                <% end %>
+
             </div>
           </div>
            <ul class="navbar-nav">

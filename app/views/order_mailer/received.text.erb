@@ -1,0 +1,14 @@
+Dear <%= @order.name %>
+Thank you for your recent order from Our Book Store. You ordered the following items:
+
+Your items:
+------------
+
+<% Order.line_items.each do |item| %>
+<%= item.book.title %> 
+<%= item.book.price %> | <%= item.quantity %>
+----------------------------------------------
+<% end %>
+
+Total: <%= Order.total_price %>
+We'll send you a separate e-mail when your order ships.

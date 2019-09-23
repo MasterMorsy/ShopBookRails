@@ -1,38 +1,41 @@
 .carts {
-    table {
-      border-collapse: collapse;
-    }
+  table {
+    border-collapse: collapse;
+  }
   td {
-      padding: 0.5em;
-    }
-    td.quantity {
-      white-space: nowrap;
-    }
+    padding: 0.5em;
+  }
+  td.quantity {
+    white-space: nowrap;
+  }
+  td.price {
+    font-weight: bold;
+    text-align: right;
+  }
+  tfoot {
+    th,
     td.price {
       font-weight: bold;
+      padding-top: 1em;
+    }
+    th {
       text-align: right;
     }
-    tfoot {
-      th, td.price {
-        font-weight: bold;
-        padding-top: 1em;
-      }
-  th {
-        text-align: right;
-      }
-  td.price {
-        border-top: solid thin;
-      }
+    td.price {
+      border-top: solid thin;
     }
-    input[type="submit"] {
-      background-color: #881;
-      border-radius: 0.354em;
-      border: solid thin #441;
-      color: white;
-      font-size: 1em;
-      padding: 0.354em 1em;
-    }
-  input[type="submit"]:hover {
-      background-color: #992;
-    }
+  }
+}
+
+.cart-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+
+  form:first-child,
+  input:first-child {
+    margin-right: 20px;
+  }
 }
