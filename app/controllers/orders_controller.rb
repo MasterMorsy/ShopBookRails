@@ -37,7 +37,7 @@ class OrdersController < ApplicationController
         @order.get_line_items_from_cart(@cart)
         OrderMailer.received(@order).deliver_later
 
-        format.html { redirect_to store_index_url, notice: "Order was successfully created." }
+        format.html { redirect_to store_index_url(locale: I18n.locale), notice: I18n.t("orders.thanks") }
         format.json { render :show, status: :created, location: @order }
       else
         format.html { render :new }

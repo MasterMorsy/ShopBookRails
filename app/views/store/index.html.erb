@@ -17,7 +17,7 @@
                 <p><%= truncate(book.description, length: 100) %></p>
                 <div class="actions">
                 <h5 class="product-price">$<%= book.price %></h5>
-                <%= button_to 'Add To Cart', line_items_path(book_id: book), class: 'addToCart', remote: true %>
+                <%= button_to t('.addToCart'), line_items_path(book_id: book), class: 'addToCart', remote: true %>
               </div>
             </div>
           </article>

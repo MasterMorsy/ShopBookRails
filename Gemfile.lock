@@ -72,6 +72,7 @@ GEM
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
       execjs (~> 2.0)
+    bcrypt (3.1.13)
     bindex (0.8.1)
     bootsnap (1.4.5)
       msgpack (~> 1.0)
@@ -101,6 +102,8 @@ GEM
       activesupport (>= 4.2.0)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
+    i18n-js (3.3.0)
+      i18n (>= 0.6.6)
     jbuilder (2.9.1)
       activesupport (>= 4.2.0)
     jquery-rails (4.3.5)
@@ -240,11 +243,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bcrypt (~> 3.1.7)
   bootsnap (>= 1.4.2)
   bootstrap (~> 4.3.1)
   byebug
   capybara (>= 2.15)
   faker!
+  i18n-js
   jbuilder (~> 2.7)
   jquery-rails
   listen (>= 3.0.5, < 3.2)

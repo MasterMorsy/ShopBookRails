@@ -12,24 +12,24 @@
   <% end %>
 
   <div class="form-group">
-    <%= form.label :name %>
+    <%= form.label t('.name') %>
     <%= form.text_field :name, size: 40, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= form.label :address %>
+    <%= form.label t('.address') %>
     <%= form.text_area :address, rows: 3, cols: 40, class: "form-control" %>
   </div>
 
   <div class="form-group">
-    <%= form.label :email %>
+    <%= form.label t('.email') %>
     <%= form.email_field :email, size: 40, class: "form-control" %>
   </div>
 
   <div id='pay-type-component'></div>
 
   <div class="cart-actions">
-    <%= form.submit(:class => "btn btn-primary") %>
-    <%= link_to 'Cancel', store_index_path, class: "btn btn-warning" %>
+    <%= form.submit( t('.create'), :class => "btn btn-primary") %>
+    <%= link_to t('.cancel'), store_index_path, class: "btn btn-warning" %>
   </div>
 <% end %>

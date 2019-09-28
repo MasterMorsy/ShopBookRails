@@ -1,0 +1,29 @@
+es:
+  shared:
+    header:
+      cart: "carro"
+      search: "buscar"
+      login: "iniciar sesión"
+      register: "registro"
+      emptyCart: "Carta vacía"
+  store:
+    index:
+      addToCart: "Añadir al carrito"
+  carts:
+    show:
+      cartItems: "Artículos de tarjeta"
+      total: "Total"
+      emptyCart: "Carta vacía"
+      checkout: "Revisa"
+      confirm: "¿Estás seguro?"
+  orders:
+    thanks: "El pedido se creó con éxito."
+    form:
+      name: "Nombre"
+      address: "Habla a"
+      email: "Email"
+      payType: "Tipo de pago"
+      create: "Crear orden"
+      cancel: "Cancelar"
+  line_items:
+    created: "Producto ha sido añadido"
